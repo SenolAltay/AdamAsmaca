@@ -1,0 +1,26 @@
+﻿create database KelimelikDB
+
+use KelimelikDB
+
+create table Kategori
+(
+id int primary key identity,
+ad nvarchar(30)
+)
+create table Kelime
+(
+id int primary key identity,
+ad nvarchar(30),
+kategoriid int
+)
+
+--kategori tablosuna 
+--meslekler,meyveler,esyalar,hayvanlar
+insert into Kategori values ('Meslekler'),('Meyveler'),('Eşyalar'),('Hayvanlar')
+
+select * from Kategori
+
+--3 meslek, 3 esya, 3 hayvan, 3 meyve ekleyelim.
+select * from Kelime
+insert into Kelime values('doktor',1),('developer',1),('ressam',1),('elektronik sigara',3),('rimel',3),('tablet',3),('zebra',4),('aslan',4),('kuş',4),('elma',2),('mandalina',2),('portakal',2),('kivi',2)
+
